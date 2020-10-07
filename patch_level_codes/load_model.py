@@ -5,6 +5,8 @@ from keras import applications,optimizers
 from keras import backend as K
 from keras.callbacks import EarlyStopping
 
+K.set_image_dim_ordering('th')
+
 def load_full_model(final_model_path):
 	vgg_model = applications.VGG16(include_top=False,input_shape=(3, 256, 256))
 	print('Model loaded.')
