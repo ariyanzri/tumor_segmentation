@@ -5,7 +5,7 @@ from keras import applications,optimizers
 from keras import backend as K
 from keras.callbacks import EarlyStopping
 
-def load_full_model():
+def load_full_model(final_model_path):
 	vgg_model = applications.VGG16(include_top=False,input_shape=(3, 256, 256))
 	print('Model loaded.')
 
@@ -35,3 +35,5 @@ def load_full_model():
 				  optimizer=optimizers.SGD(lr=1e-4, momentum=0.9),
 				  metrics=['accuracy'])
 	return model
+
+load_full_model('/space/ariyanzarei/results/2598/final_model/final_model_2598.h5')
