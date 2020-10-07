@@ -38,4 +38,5 @@ def load_full_model(final_model_path):
 				  metrics=['accuracy'])
 	return model
 
-load_full_model('/space/ariyanzarei/results/2598/final_model/final_model_2598.h5')
+model = load_full_model('/space/ariyanzarei/results/2598/final_model/final_model_2598.h5')
+model.save('/work/ariyanzarei/mdl.h5')
